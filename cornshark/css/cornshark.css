@@ -1,0 +1,111 @@
+body	
+{
+	background:black;
+	font-family: Maiandra GD, Tahoma, Verdana, Arial, sans serif;
+	color: white;
+}
+hr	
+{
+	top: 0px;
+	left: 0px;
+	color: rgb(128,128,128);
+	background: rgb(128,128,128);
+	height:2px;
+	width: 90%;
+	border:none;
+	margin-top:0px;
+	margin-bottom:0px;
+}
+div	
+{
+	margin:0px;
+}
+p
+{
+	font-size: 18px;
+	margin-left:4px;
+	margin-right:4px;
+	margin-bottom:20px;
+	margin-top:4px;
+}
+a:link, a:visited, a:active	
+{
+	color: rgb(0,255,0);
+	text-decoration: none;
+	        
+}
+a:hover	
+{
+	color: rgb(255,255,0);
+	font-weight: bold;
+	font-size: smaller;
+	text-decoration: underline overline;
+}
+
+h1
+{
+	color: rgb(255,255,0);
+	font-size: 32px;
+}
+
+h2
+{
+	color: rgb(200,200,0);
+}
+
+
+/*--- Nav Rules ---*/
+#navheader	{
+	width: 780px;
+	border:none;
+	margin-top:0px;
+	margin-bottom:10px;
+}
+.sitetitle	{
+	font-size: 14px;
+	font-weight: bold;
+	margin-bottom:3px;
+}
+.nav	{
+	font-size: .6em;
+}
+
+/*--- Content Rules ---*/
+#content	{
+	width:780px;
+}
+.copy	{
+	position:relative;
+	width:400;
+	height:auto;
+	font-size:12px;
+	margin-top:0px;
+}
+#content img	{
+	float:left;
+	margin:0 10px 20px 0;
+}
+.pagetitle	{
+	font-size: 14px;
+	font-weight: bold;
+	margin-bottom:3px;
+}
+
+
+/*--- Footer Rules ---*/
+#footer	{
+	margin-top:10px;
+	width:780px;
+	text-align:center;
+	clear:left;
+}
+.update	{
+	margin-top:3px;
+	height:auto;
+	font-size:12px;
+	text-align:center;
+}
+.copyright	{
+	font-size:10px;
+}
+	

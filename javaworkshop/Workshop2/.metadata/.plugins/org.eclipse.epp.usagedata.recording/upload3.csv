@@ -1,0 +1,26 @@
+what,kind,bundleId,bundleVersion,description,time
+locale,sysinfo,,,"en_US",1269618064152
+processors,sysinfo,,,"2",1269618064152
+java.runtime.name,sysinfo,,,"Java(TM) SE Runtime Environment",1269618064152
+java.runtime.version,sysinfo,,,"1.6.0_17-b04",1269618064152
+java.specification.name,sysinfo,,,"Java Platform API Specification",1269618064152
+java.specification.vendor,sysinfo,,,"Sun Microsystems Inc.",1269618064152
+java.specification.version,sysinfo,,,"1.6",1269618064152
+java.vendor,sysinfo,,,"Sun Microsystems Inc.",1269618064152
+java.version,sysinfo,,,"1.6.0_17",1269618064152
+java.vm.info,sysinfo,,,"mixed mode",1269618064152
+java.vm.name,sysinfo,,,"Java HotSpot(TM) Client VM",1269618064152
+java.vm.specification.name,sysinfo,,,"Java Virtual Machine Specification",1269618064152
+java.vm.specification.vendor,sysinfo,,,"Sun Microsystems Inc.",1269618064152
+java.vm.specification.version,sysinfo,,,"1.0",1269618064152
+java.vm.vendor,sysinfo,,,"Sun Microsystems Inc.",1269618064152
+java.vm.version,sysinfo,,,"14.3-b01",1269618064152
+activated,view,org.eclipse.jdt.ui,3.5.0.v20090604,"org.eclipse.jdt.ui.PackageExplorer",1269618066429
+activated,view,org.eclipse.jdt.ui,3.5.0.v20090604,"org.eclipse.jdt.ui.PackageExplorer",1269618066508
+closed,view,org.eclipse.ui,3.5.0.I20090604-2000,"org.eclipse.ui.internal.introview",1269618066544
+started,bundle,org.eclipse.debug.core,3.5.0.v20090526-1600,"org.eclipse.debug.core",1269618073651
+started,bundle,org.eclipse.jdt.launching,3.5.0.v20090527,"org.eclipse.jdt.launching",1269618073684
+deactivated,workbench,org.eclipse.ui.workbench,3.5.0.I20090603-2000,"",1269618074768
+activated,workbench,org.eclipse.ui.workbench,3.5.0.I20090603-2000,"",1269618132602
+deactivated,workbench,org.eclipse.ui.workbench,3.5.0.I20090603-2000,"",1269618135154
+activated,workbench,org.eclipse.ui.workbench,3.5.0.I20090603-2000,"",1269618137579

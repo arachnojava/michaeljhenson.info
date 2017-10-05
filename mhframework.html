@@ -1,0 +1,388 @@
+<html>
+    <head>
+        <title>The MHFramework Project</title>
+	<link rel="stylesheet" type="text/css" href="css/michaeljhenson.css" />
+	<script language="JavaScript" src="js/functions.js"></script>
+	<script language="JavaScript" src="js/quote.js"></script>
+    </head>
+    <body bgcolor="#000000"><font color="#000080" face="Tahoma">
+        <table background="images/metal003.gif" border="0" cellpadding="0" cellspacing="10" width="100%">
+            <tr>
+                <td>
+                    <a href="index.html"><img src="images/PortfolioLogo.gif" width="128" height="96" border="0" /></a>
+                </td>
+                <td>
+					<script language="JavaScript">
+			           showQuote();
+   					</script>
+                </td>
+            </tr>
+            <tr>
+                <td valign="top" width="128" >
+					<script language="JavaScript">
+			           showMenu();
+   					</script>
+                </td>
+                <td background="images/Granite_Edifice.jpg" bgcolor="#999999" valign="top"> 
+                <!-- ----------- BEGIN MAIN CONTENT AREA ------------------------ -->
+		    <div align="right"><table border="4"><tr><th><b><font color="#000080">Current Baseline:</font>  2.04</b></th></tr></table></div>
+		    
+                <h1 id="top">The MHFramework Project</h1>
+            <h3>Table of Contents</h3>
+            <p><b>
+                * <a href="#intro">Introduction</a><br />
+                * <a href="#justification">Justification for the MHFramework 2 Project</a><br />
+                * <a href="#compatibility">Compatibility</a><br />
+                * <a href="#releases">Release History</a><br />
+                * <a href="#engineering">Engineering the MHFramework 2 Project</a><br />
+                * <a href="#comparison">Comparison to Standard Game Engine Features</a><br />
+                * <a href="#seealso">See Also</a><br />
+            </b></p>
+            <img src="images/PoweredByMHFramework.jpg" width="160" height="160" border="0" hspace="16" vspace="8" align="left" /> 
+            <h2 id="intro">Introduction</h2>
+            <p>
+            <b>MHFramework</b> is my home-brewed game engine for creating games using Java Standard Edition technology.  As its name
+            subtly implies, it began life as a mere framework of classes that provided a few fundamental features needed in most games, such as
+            sprite animation, image loading, and primitive scene management.  But as the requirements of my games grew more sophisticated, so
+            did the framework upon which they were built.
+            </p>
+            <p>
+            I consider MHFramework 1 to be the experimental version -- the one that let me try out some things and figure out what was missing or in
+            need of improvement.  Now MHFramework 2 is underway, guided by my analysis and ongoing notation of the strengths and weaknesses of version 1
+            plus the documented requirements of my next series of game projects.
+            </p>
+            <h2 id="justification">Justification for the MHFramework 2 Project</h2>
+            <p>
+            MHFramework 1 was developed gradually over the course of about five years.  Its growth was mostly reactionary, since I just added components
+            here and there as they became necessary for whatever project I was doing at the time.  Therefore, much of the first version was
+            not well engineered.  Its cohesion varied from one place to another, and there were several places where things were less efficient, or at least
+            less convenient, than I thought they should be.
+            </p>
+            <p>
+            For these reasons, MHFramework needed more than just another piecemeal upgrade.  It's getting a pretty severe overhaul because my next
+            projects are going to need much stronger support than my casual games of the past have required.
+            </p>
+            <p align="center"><a href="#top">Back to top</a></p>
+            <h2 id="compatibility">Compatibility</h2>
+            <p>
+            MHFramework 2 will not attempt to maintain backward compatibility because that would unnecessarily bloat the code and require the inclusion
+            of several classes that could otherwise be eliminated from the package.  However, some projects will be upgraded as specific releases become 
+            available.  Older versions of the framework and the engine will be kept in order to maintain compatibility, but there will be no further 
+            development, enhancement, or modification of those obsolete versions.
+            </p>
+            <p align="center"><a href="#top">Back to top</a></p>
+            <h2 id="releases">Release History</h2>
+            <p>
+            	<table border="1" align="center" width="90%">
+                <tr>
+                	<th>Version</th><th>Features</th><th>Affected classes</th>
+                </tr>
+                <!---------------- 2.04 ---------------->
+                <tr>
+                    <td valign="top">2.04</td>
+                    <td valign="top">
+                       	<ul>
+		                    <li>Framework for particle system.</li>
+                            <li>MHGUIDialog hierarchy.</li>
+		                	<li>Mouse cursor toggle and customization</li>
+                           	<li>Support for dynamic textures (texture image to iso tile transformation)</li>
+                            <li>Isometric tile transformer utility</li>
+	                    	<li>MHFile hierarchy for text and serialized object files.</li>
+                          <li>Thread manager</li>
+
+                        </ul>
+					</td>
+                </tr>                
+                <!---------------- 2.03 ---------------->
+                <tr>
+                    <td valign="top">2.03</td>
+                    <td valign="top">
+                       	<ul>
+                        	<li>Error message display in MHScreen</li>
+                            <li>Error reporting and color validation in MHServerModule</li>
+                            <li>Fixed windowed mode rotation bug in MHActor</li>
+                            <li>Enhanced support for graphical fonts</li>
+                            <li>Command Pattern implementation in MHGUIButton</li>
+                            <li>Sound effects in MHGUIButton</li>
+                            <li>A* path-finding support for tile maps</li>
+                        </ul>
+                    </td>
+                    <td valign="top">
+<b>Affected Classes:</b>  MHActor, MHScreen, MHServerModule
+<br /><font color="#009900"><b>New classes:</b></font> None.
+<br /><font color="#990000"><b>Eliminated classes:</b></font>  None.
+                    </td>
+                </tr>
+                <!---------------- 2.02 ---------------->
+                <tr>
+                    <td valign="top">2.02</td>
+                    <td valign="top">
+                       	<ul>
+                            <li>Added detail layer to tile maps.</li>
+                            <li>Changed all tile size constants to reference mouse map size.</li>
+                        	<li>Made a more advanced application launcher dialog that allows selection
+                                of resolution in addition to choosing full screen vs. windowed mode.</li>
+                        	<li>Created MHSerializable interface to be implemented by objects 
+                                that must be serialized (passed across a network, written to 
+                                a file, etc.).</li>
+                		</ul>
+					</td>
+                    <td valign="top">
+<b>Affected Classes:</b>  MHMapCell, MHIsoMouseMap
+<br /><font color="#009900"><b>New classes:</b></font> MHSerializable
+<br /><font color="#990000"><b>Eliminated classes:</b></font>  None.
+                    </td>
+                </tr>
+
+                <!---------------- 2.01 ---------------->
+                <tr>
+                    <td valign="top">2.01</td>
+                    <td valign="top">
+                       	<ul>
+                        	<li>Support for rotation and translation vectors</li>
+                            <li>Refined actor hierarchy</li>
+                            <li>Multithreaded client/server modules with standardized message object</li>
+                            <li>Standard playing card deck</li>
+			    <li>FPS measurement</li>
+                		</ul>
+					</td>
+                    <td valign="top">
+<b>Affected Classes:</b>  MHActor, MHGame, MHDisplayModeChooser
+<br /><font color="#009900"><b>New classes:</b></font> MHPoint, MHClientModule, MHMessageType, MHNetworkMessage,
+                                                       MHSerializableClientInfo, MHSerializableClientList, MHClientInfo,
+                                                       MHGameServer, MHServerModule, MHRotationLookup, MHPlayingCard,
+                                                       MHPlayingCardDeck
+<br /><font color="#990000"><b>Eliminated classes:</b></font>  MHStaticActor
+                    </td>
+                </tr>
+                <!---------------- 2.00 ---------------->
+                <tr>
+                    <td valign="top">2.00</td>
+                    <td valign="top">
+                       	<ul>
+                			<li>Parameterize MHDisplayModeChooser to allow customization of video mode.</li>
+                    		<li>Improve support for windowed mode.</li>
+                    		<li>Simplify use of MHGameApplication.</li>
+                    		<li>Upgrade all image loading code to use Java's ImageIO class.</li>
+                    		<li>Upgrade all Graphics parameters to Graphics2D objects.</li>
+                		</ul>
+					</td>
+                    <td valign="top">
+<b>Affected Classes:</b>  MHDisplayModeChooser, MHGameApplication, MHScreenManager, MHDataModel, MHScreen,
+MHImageGroup, MHFrameSequence, MHAnimationFrame, MHRenderable, MHStaticActor, MHGame, MHActor, MHAppLauncher
+<br /><font color="#009900"><b>New classes:</b></font> MHVideoSettings, MHFrameworkConstants
+<br /><font color="#990000"><b>Eliminated classes:</b></font> MHGameWindow
+                    </td>
+                </tr>
+            	</table>
+            </p>
+            <p align="center"><a href="#top">Back to top</a></p>
+            <h2 id="engineering">Engineering the MHFramework 2 Project</h2>
+            <p>
+            The upgrades to MHFramework are organized into categories that may or may not developed contiguously.  The focus and goals of each category are listed below.  The numbering and ordering may change, but the general categorizations most likely will not.
+            </p>
+            <h3><font color="#000080">Category 0:</font>  Improved Video Mode Control</h3>
+            <p><b>Candidate Tasks:</b>
+            	<ul>
+                    <li>Enable real-time rendering to Image object.  (Postponed)  
+                        <br /><b>Workaround:</b>  Do not allow users to select screen dimensions that differ from game's native resolution
+                        or other explicitly supported modes.</li>
+                </ul>
+            </p>
+            <h3><font color="#000080">Category 1:</font>  Networking</h3>
+            <p><b>Candidate Tasks:</b>
+            	<ul>
+               	  <li>Observer pattern implementation for message handling.  (with message listener hierarchy)</li>
+                	<li>Categorized system messages.</li>
+                </ul>
+            <h3><font color="#000080">Category 2:</font>  Animation Improvements and Actor System Redesign</h3>
+            <p><b>Candidate Tasks:</b>
+            	<ul>
+                	<li>Improved frame rate synchronization.</li>
+                    <li>New algorithm for pause mode.  (Required for discrete motion.)</li>
+                    <li>Non-sequential frame sequence numbers in image groups.  (Re-test using hashes.)</li>
+                    <li>Support for sprite sheets as an alternative to frame sequences.</li>
+                </ul>
+            </p>
+            <h3><font color="#000080">Category 3:</font>  GUI Enhancements</h3>
+            <p><b>Candidate Tasks:</b>
+            	<ul>
+                	<li>Enhancements to MHGUIDialog.</li>
+                    <ul>
+                    	<li>Specify font, border image OR border color and thickness, font color, background color</li>
+                        <li>Include button options like OK, OK/Cancel, Yes/No, etc.</li>
+                    </ul>
+                	<li>New user-customizable interface for MHAppLauncher</li>
+                    <ul>
+                    	<li>Parameterize with image file, image location, and game title</li>
+                    </ul>
+                	<li>Animated buttons</li>
+                	<li>MHGUIToggleButton and MHGUIButtonGroup</li>
+                    <li>Pull-down menu (perhaps hidable button menu)</li>
+                </ul>
+            </p>
+            <h3><font color="#000080">Category 4:</font>  Audio System Upgrades</h3>
+            <p><b>Candidate Tasks:</b>
+            	<ul>
+                	<li>Standardized interface to sound and music classes</li>
+                	<li>Volume support in sound class</li>
+                	<li>Stereo panning support in sound class</li>
+                	<li>Volume support in music class</li>
+               	</ul>
+            </p>
+            <h3><font color="#000080">Category 5:</font>  Tile Map System Upgrades</h3>
+            <p><b>Candidate Tasks:</b>
+            	<ul>
+                	<li>Hex map support</li>
+                    <li>Devise new rendering algorithm to accomodate large (multi-cell) objects (easier asset creation) 
+                        <br>OR break into separate wall tiles (more accurate collision detection)</li>
+                	<li>Diagnose and repair staggered isometric maps</li>
+                    <li>Decouple finely-placed actors from the map data structure.</li>
+                </ul>
+            <h3><font color="#000080">Category 6:</font>  Metrics and Logging</h3>
+            <p><b>Candidate Tasks:</b></p>
+            	<ul><li>Re-test FPS measurement.  It may not be accurate.</li>
+                	<li>Debugging constants to set logging level</li>
+                    <li>Instance counters for actors</li>
+                </ul>
+            <h3><font color="#000080">Category 7:</font>  Additional Support for Common Game Mechanics</h3>
+            <p><b>Candidate Tasks:</b>
+            </p>
+            	<ul>
+                	<li>Collision response mechanism -- maybe a collision processor to accomodate discrete time motion.</li>
+	                <li>MHCollisionGeometry interface with rectangular, spherical, composite, or custom implementations</li>
+                    <li>Generalized inventory system with iterator, search functions, and instance counters for stackable items</li>
+                </ul>
+            <h3><font color="#000080">Category 8:</font>  Artificial Intelligence and Thread Management</h3>
+            <p><b>All current candidate tasks in this category have been implemented.</b>
+            </p>
+
+            <h3><font color="#000080">Category 9:</font>  Optional Improvements</h3>
+            <p><b>Candidate Tasks:</b>
+            </p>
+            	<ul>
+                	<li>Applet support</li>
+                    <li>JDBC encapsulation</li>
+                    <li>Gravity constant, hasGravity flag in Actor class</li>
+                    <li>Facade for managing global MHFramework singletons</li>
+                    <li>General event queue</li>
+                    <li>Global singleton keyboard/mouse status structures (like in DirectX)</li>
+                    <li>Alpha blended sprites</li>
+                    <li>Built-in loading thread for MHScreen classes</li>
+                    <li>Isometric adventure starter kit</li>
+                    <li>Sidescroller starter kit</li>
+                </ul>
+            <p align="center"><a href="#top">Back to top</a></p>
+
+            <h2 id="comparison">Comparison to Standard Game Engine Features</h2>
+            <p>Following is a table comparing the features of MHFramework with those commonly found in other game engines.</p>
+            <table border="2" cellpadding="6" cellspacing="4" align="center" width="92%">
+                <tr>
+                    <th>Feature</th>                  <th>Currently<br />Supported?</th><th>Future<br />Plans?</th><th>Remarks</th>
+                </tr>
+                <tr>
+                    <td valign="top">2D graphics rendering</td>    <td valign="top">Yes</td> <td valign="top">Yes</td><td valign="top">The current upgrade project will provide additional support
+                                                                                   for 2D transforms.  A system for filters already exists but
+                                                                                   has not been tested.</td>
+                </tr>
+                <tr>
+                    <td valign="top">3D graphics rendering</td>    <td valign="top">No</td>  <td valign="top">Yes</td><td valign="top">It is likely that future versions will support OpenGL, but that
+                                                                                  is beyond the scope of the current project.</td>
+                </tr>
+                <tr>
+                    <td valign="top">Physics</td>                  <td valign="top">No</td>  <td valign="top">Yes</td>  <td valign="top">A pending upgrade is adding built-in support for gravity.
+                                                                                 Future upgrades will add support for other common physics calculations.</td>
+                </tr>
+                <tr>
+                    <td valign="top">Resource management</td>      <td valign="top">Yes</td> <td valign="top">Yes</td><td valign="top">The sound and music classes encapsulate support for those types of media.
+                                                                                 Image groups and sprite frame sequences manage image data.</td>
+                </tr>
+                <tr>
+                    <td valign="top">Input detection</td>          <td valign="top">Yes</td> <td valign="top">Yes</td><td valign="top">Keyboard and mouse usage has been well-established since the earliest
+                                                                                versions of MHFramework.  The current upgrade project may involve refining and 
+                                                                                generalizing the system even further, but that is currently a subject of debate.</td>
+                </tr>
+                <tr>
+                    <td valign="top">Timers</td>                   <td valign="top">Yes</td><td valign="top">Yes</td><td valign="top">The engine uses the system clock to calculate frame delays.  
+                                                                                <a href="cornshark.html"><i>CornShark</i></a>
+                                                                                has a general timer class for tracking game time.  That class will be
+                                                                                generalized.</td>
+                </tr>
+                <tr>
+                    <td valign="top">Sprite management</td>        <td valign="top">Yes</td> <td valign="top">Yes</td><td valign="top">MHActorList objects maintain collections of all types of actors.  This system
+                                                                                will be improved with possible inclusion of collision detection.</td>
+                </tr>
+                <tr>
+                    <td valign="top">Audio</td>                    <td valign="top">Yes</td> <td valign="top">Yes</td><td valign="top">The upgrade will add
+                                                                                more advanced controls and standardization of music and sound interfaces.</td>
+                </tr>
+                <tr>
+                    <td valign="top">Scripting</td>                <td valign="top">No</td>  <td valign="top">No</td><td valign="top">Java's virtual machine allows class files to be added and replaced individually
+                                                                                without necessarily requiring a complete recompile.  This reason, combined with
+                                                                                the loose coupling in MHFramework's actor system, means the engine may never
+                                                                                require its own scripting language.</td>
+                </tr>
+                <tr>
+                    <td valign="top">Data structures</td>          <td valign="top">Yes</td><td valign="top">Yes</td><td valign="top">Java's collections API works well enough for most cases, but to simplify common
+                                                                                requirements, MHF provides actor lists, will soon provide a generalized
+                                                                                inventory system, and will eventually include optimization structures
+                                                                                like BSP trees.</td>
+                </tr>
+                <tr>
+                    <td valign="top">Artificial Intelligence</td>  <td valign="top">No</td>  <td valign="top">Yes</td><td valign="top">Pathfinding for MHTileMap objects is coming.</td>
+                </tr>
+                <tr>
+                    <td valign="top">Thread management</td>        <td valign="top">No</td>  <td valign="top">Yes</td><td valign="top">MHFramework will simplify multithreading by establishing a common
+                    															framework and monitoring services.</td>
+                </tr>
+                <tr>
+                    <td valign="top">Networking</td>               <td valign="top">Yes</td>  <td valign="top">Yes</td><td valign="top">Networking support is provided in the <code>mhframework.net</code> package.</td>
+                </tr>
+                <tr>
+                    <td valign="top">User interface components</td><td valign="top">Yes</td> <td valign="top">Yes</td><td valign="top">The engine contains a MHGUIComponent hierarchy which will be
+                                                                                expanded and improved.</td>
+                </tr>
+                <tr>
+                    <td valign="top">Collision response</td>       <td valign="top">No</td>  <td valign="top">Yes</td><td valign="top">A standard interface for communicating and mediating collisions is 
+                    															coming, but the class design is not yet adequate to support all requirements.</td>
+                </tr>
+                <tr>
+                    <td valign="top">Logging and profiling</td>    <td valign="top">No</td>  <td valign="top">Yes</td><td valign="top">MHF will incorporate standard utilities for these purposes and more.</td>
+                </tr>
+                <tr>
+                    <td valign="top">Editors and utilities</td>    <td valign="top">Yes</td> <td valign="top">Yes</td><td valign="top">New versions of <a href="lime.html">LIME</a> and 
+                                                                                   <a href="spritetester2.html">SpriteTester</a> will be released as the necessary versions
+                                                                                   of MHFramwork become available.  After the implementation of the particle
+                                                                                   framework, a utility for testing particle effects will follow.</td>
+                </tr>
+            </table>
+            <p align="center"><a href="#top">Back to top</a></p>
+            <h2 id="seealso">See Also</h2>
+            <p><a href="lime.html"><b>LIME</b></a> -- Layered Isometric Map Editor</p>
+            <p><a href="spritetester2.html"><b>SpriteTester 2</b></a> Animation Viewer</p>
+            <p><a href="doc/index.html" target="_blank"><b>MHFramework</b></a> API Documentation</p>
+            <p align="center"><a href="#top">Back to top</a></p>
+            <!-- END MAIN CONTENT AREA -->
+            </td>
+            </tr>
+        </table>
+	</font>
+    <script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-13007555-1");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+<!-- Start Quantcast tag -->
+<script type="text/javascript" src="http://edge.quantserve.com/quant.js"></script>
+<script type="text/javascript">_qacct="p-5eyu0sJEHC0jc";quantserve();</script>
+<noscript>
+<a href="http://www.quantcast.com/p-5eyu0sJEHC0jc" target="_blank"><img src="http://pixel.quantserve.com/pixel/p-5eyu0sJEHC0jc.gif" style="display: none;" border="0" height="1" width="1" alt="Quantcast"/></a>
+</noscript>
+<!-- End Quantcast tag -->
+            </p>
+    </body>
+</html>

@@ -1,0 +1,103 @@
+<html>
+<head>
+    <title>Tarot Spread:  The Celtic Cross</title>
+	<link rel="stylesheet" type="text/css" href="css/michaeljhenson.css" />
+	<script language="JavaScript" src="js/functions.js"></script>
+	<script language="JavaScript" src="js/quote.js"></script>
+	<script language="JavaScript" src="js/tarot.js"></script>
+	<script language="JavaScript">
+	function buildReport()
+	{
+		report();
+	}
+    </script>
+    
+</head>
+    <body bgcolor="#000000"><font color="#000080" face="Tahoma">
+        <table background="images/metal003.gif" border="0" cellpadding="0" cellspacing="10" width="100%">
+            <tr>
+                <td>
+                    <a href="index.html"><img src="images/PortfolioLogo.gif" width="128" height="96" border="0" /></a>
+                </td>
+                <td>
+					<script language="JavaScript">
+			           showQuote();
+   					</script>
+                </td>
+            </tr>
+            <tr>
+                <td valign="top" width="128" >
+					<script language="JavaScript">
+			           showMenu();
+   					</script>
+                </td>
+                <td background="images/Granite_Edifice.jpg" bgcolor="#999999" valign="top" >
+
+<h1>Tarot Spread:  The Celtic Cross</h1>
+
+<table border="0"><tr><td valign="top" width="50%">
+
+<h2>How to Use This Program</h2>
+
+<h3>The Setup</h3>
+<ol>
+	<li><i><b>Make sure JavaScript in enabled in your browser!</b></i></li>
+	<li><b>Get a deck of Tarot cards.</b>  Any deck will do.</li>
+</ol>
+<h3>The Procedure</h3>
+<ol>
+    <li><b>Shuffle</b> the cards thoroughly.  Try to use a shuffling technique that will not damage the edges of your cards.</li>
+    <li><b>Decide on a subject</b> for the spread.  It can be a question, person, situation, event, thing, ect.</li>
+    <li><b>Draw ten cards</b>, one at a time.  For each card that you draw, select it from the appropriate dropdown list in the lookup form.  The first card that you draw will be selected from the list labeled &quot;1. The Present&quot;,
+        the second will be selected from &quot;2. The Immediate Challenge&quot;, and so on.<br />If you'd like, you may lay them out in the Celtic Cross pattern shown at the bottom of this page.</li>
+    <li>When you have drawn all ten cards and selected them in the lookup form, <b>click the button below the form</b> to generate a report explaining the meaning of each card.</li>
+</ol>
+<h3>Notable Differences Between Tarot Decks</h3>
+<ul>
+<li><b>Disks vs. Pentacles:</b>  Some Tarot decks have a suit of Pentacles while others have a suit of Disks instead.  This program uses Disks, so Queen of Disks = Queen of Pentacles, and so on.</li>
+<li><b>Highpriest vs. Heirophant:</b>  In some decks, Major Arcana card V is The Heirophant, and in others it is The Highpriest.  These are assumed equivalent.</li>
+</ul>
+
+</td><td valign="top" width="50%">
+<h2>The Lookup Form</h2>
+<p>Select the cards you have drawn from the dropdown lists below.  Order is important, so pay attention to the numbers on the form.</p>
+<script language="JavaScript">buildForm();</script>
+<p align="center"><input type="button" value="Look up cards and generate report" onClick="buildReport();"></p>
+
+</td></tr></table>
+
+<h2>The Celtic Cross</h2>
+<p>Here is the typical layout of the Celtic Cross spread for reference.</p>
+
+<table cellpadding="20" border="2" align="center">
+ 	<tr>
+		<td><!-- Blank --></td>
+		<td><p align="center">3.  <script language="JavaScript">writePositionCaption(3);</script></p></td>
+		<td><!-- Blank --></td>
+		<td><p align="center">10.  <script language="JavaScript">writePositionCaption(10);</script></p></td>
+	</tr>
+	<tr>
+		<td><p align="center">5.  <script language="JavaScript">writePositionCaption(5);</script></p></td>
+		<td><p align="center">1.  <script language="JavaScript">writePositionCaption(1);</script></p></td>
+		<td><p align="center">6.  <script language="JavaScript">writePositionCaption(6);</script></p></td>
+		<td><p align="center">9.  <script language="JavaScript">writePositionCaption(9);</script></p></td>
+	</tr>
+ 	<tr>
+		<td><!-- Blank --></td>
+		<td><p align="center">2.  <script language="JavaScript">writePositionCaption(2);</script></p></td>
+		<td><!-- Blank --></td>
+		<td><p align="center">8.  <script language="JavaScript">writePositionCaption(8);</script></p></td>
+	</tr>
+ 	<tr>
+		<td><!-- Blank --></td>
+		<td><p align="center">4.  <script language="JavaScript">writePositionCaption(4);</script></p></td>
+		<td><!-- Blank --></td>
+		<td><p align="center">7.  <script language="JavaScript">writePositionCaption(7);</script></p></td>
+	</tr></table>
+
+</td>
+</tr>
+</table>
+</font>
+</body>
+</html>

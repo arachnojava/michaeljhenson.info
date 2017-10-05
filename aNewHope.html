@@ -1,0 +1,109 @@
+<html>
+    <head>
+        <title>Word Game</title>
+	<link rel="stylesheet" type="text/css" href="css/michaeljhenson.css" />
+	<script language="JavaScript" src="js/functions.js"></script>
+	<script language="JavaScript" src="js/quote.js"></script>
+    <script language="javascript" src="js/madFunctions.js"></script>
+    <script language="javascript" src="js/aNewHope.js"></script>
+	<script language="JavaScript">
+		pic1= new Image(800,72); 
+		pic1.src="images/Granite_Edifice.jpg"; 
+	</script>
+
+    </head>
+    <body bgcolor="#000000"><font color="#000080" face="Tahoma">
+        <table background="images/metal003.gif" border="0" cellpadding="0" cellspacing="10" width="100%">
+            <tr>
+                <td>
+                    <a href="index.html"><img src="images/PortfolioLogo.gif" width="128" height="96" border="0" /></a>
+                </td>
+                <td>
+                    <script language="JavaScript">
+		        showQuote();
+                    </script>
+                </td>
+            </tr>
+            <tr>
+                <td valign="top" width="128" >
+			<script language="JavaScript">
+		           showMenu();
+   			</script>
+                </td>
+                <td background="images/Granite_Edifice.jpg" bgcolor="#999999" valign="top" >
+		<h1><font face="Tahoma">Enter Parts of Speech</font></h1>
+		<p>
+		Enter a word in each field. Don't leave any blank! 
+        When you are finished, click the <tt><b>Continue</b></tt> button at the bottom of the page.
+        </p>
+		<p>
+			<form name="nouns">
+				<script language="JavaScript">
+            makeWordTable("Nouns", 9);
+				</script>
+			</form>
+			<form name="pluralNouns">
+				<script language="JavaScript">
+            makeWordTable("Plural Nouns", 6);
+				</script>
+			</form>
+			<form name="adjectives">
+				<script language="JavaScript">
+            makeWordTable("Adjectives", 3);
+				</script>
+			</form>
+			<form name="verbs">
+				<script language="JavaScript">
+            makeWordTable("Verbs", 2);
+				</script>
+			</form>
+			<form name="verbPast">
+				<script language="JavaScript">
+            makeWordTable("Verb (past tense)", 1);
+				</script>
+			</form>
+			<form name="number">
+				<script language="JavaScript">
+            makeWordTable("A Number", 1);
+				</script>
+			</form>
+			<form name="anEvent">
+				<script language="JavaScript">
+            makeWordTable("An Event", 1);
+				</script>
+			</form>
+			<form name="person">
+				<script language="JavaScript">
+            makeWordTable("Name of a person in the room", 1);
+				</script>
+			</form>
+			<input type="button" value="Continue" onClick="checkForm();">
+			<script language="JavaScript">
+        function checkForm()
+	{
+            if (validate())
+                doANH();
+	    else
+		window.alert("You left something blank!");
+	}
+			</script>
+        </p>
+        </td></tr></table>
+        <script type="text/javascript">
+var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
+document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
+</script>
+<script type="text/javascript">
+try {
+var pageTracker = _gat._getTracker("UA-13007555-1");
+pageTracker._trackPageview();
+} catch(err) {}</script>
+<!-- Start Quantcast tag -->
+<script type="text/javascript" src="http://edge.quantserve.com/quant.js"></script>
+<script type="text/javascript">_qacct="p-5eyu0sJEHC0jc";quantserve();</script>
+<noscript>
+<a href="http://www.quantcast.com/p-5eyu0sJEHC0jc" target="_blank"><img src="http://pixel.quantserve.com/pixel/p-5eyu0sJEHC0jc.gif" style="display: none;" border="0" height="1" width="1" alt="Quantcast"/></a>
+</noscript>
+<!-- End Quantcast tag -->
+	</body>
+</html>
